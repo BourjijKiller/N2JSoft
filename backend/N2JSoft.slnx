@@ -1,0 +1,24 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="DomainServices/DomainServices.csproj" Id="41fb3b70-176f-4d48-8f6a-941bc91aeb27">
+      <BuildDependency Project="Models/DTO.csproj" />
+      <BuildDependency Project="Repository/Repository.csproj" />
+    </Project>
+    <Project Path="Models/DTO.csproj" Id="3f4e183f-a903-41c5-a7d3-ec09f3f4afcb" />
+    <Project Path="Repository/Repository.csproj" Id="9b0da0d2-e641-4378-84ff-7342c8d1b4c8" />
+    <Project Path="Services/Services.csproj" Id="70601355-36f5-4beb-bcc6-16edec9ec39d">
+      <BuildDependency Project="Models/DTO.csproj" />
+      <BuildDependency Project="Repository/Repository.csproj" />
+    </Project>
+    <Project Path="src\AppHost\AppHost.csproj" />
+    <Project Path="src\WebApi\WebApi.csproj">
+      <BuildDependency Project="Services/Services.csproj" />
+    </Project>
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test\WebApi.Tests\WebApi.Tests.csproj" />
+  </Folder>
+  <Folder Name="/_/">
+    <File Path="global.json" />
+  </Folder>
+</Solution>

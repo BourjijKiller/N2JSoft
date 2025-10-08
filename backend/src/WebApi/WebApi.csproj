@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>$(NoWarn);1591</NoWarn>
+		<!-- (optionnel) évite les warnings sur les commentaires manquants -->
+
+	</PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.3.1" />
+        <PackageReference Include="Aspire.StackExchange.Redis" Version="9.3.1" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.7" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.9" />
+        <PackageReference Include="Scalar.AspNetCore" Version="2.8.10" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.6" />
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="9.0.6" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Infrastructure\Cache\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Services\Services.csproj" />
+    </ItemGroup>
+
+</Project>
